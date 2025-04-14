@@ -3,9 +3,9 @@ import React from 'react'
 
 const Achievements = () => {
     return (
-        <div className='px-16 py-16 flex flex-col justify-center items-center gap-6 bg-gridBg'>
-            <h2 className='text-[56px] font-semibold'>Achievements</h2>
-            <p className='text-[24px] text-center mb-12'>Celebrating our success and milestones</p>
+        <div className='px-4 py-4 flex flex-col justify-center items-center gap-4 md:gap-6 bg-gridBg md:px-16 md:py-16'>
+            <h2 className='text-[32px] sm:text-[56px] font-semibold'>Achievements</h2>
+            <p className='text-[18px] sm:text-[24px] text-center'>Celebrating our success and milestones</p>
 
             <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {/* Achievement 1 */}
@@ -116,11 +116,11 @@ const Achievements = () => {
                     <p className='text-sm text-black opacity-80'>A major global summit focusing on international cooperation and economic development.</p>
                 </div>
             </div>
-            <p className='text-[24px]'>Meetings of the 46th session of the Council of Arab Ministers of Youth and Sports</p>
+            <p className='text-[18px] sm:text-[24px] text-center font-semibold'>Meetings of the 46th session of the Council of Arab Ministers of Youth and Sports</p>
             <div className='w-full h-auto'>
                 <Image src={"/conference1.png"} alt='conference1' width={1000} height={350} className='w-full h-full' />
             </div>
-            <p className='text-[24px]'>Global Summit of the General Aviation 2016</p>
+            <p className='text-[18px] sm:text-[24px] text-center font-semibold'>Global Summit of the General Aviation 2016</p>
             <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 <div className='w-full h-auto'>
                     <Image src={"/conference2.png"} alt='conference2' width={360} height={280} className='w-full h-full' />
@@ -128,15 +128,15 @@ const Achievements = () => {
                 <div className='w-full h-auto'>
                     <Image src={"/conference3.png"} alt='conference3' width={360} height={280} className='w-full h-full' />
                 </div>
-                <div className='w-full h-auto'>
+                <div className='w-full h-auto col-span-1 md:col-span-2 lg:col-span-1'>
                     <Image src={"/conference4.png"} alt='conference4' width={360} height={280} className='w-full h-full' />
                 </div>
             </div>
-            <p className='text-[24px]'>FII 2017 Future Investment Initiative Ritz Carlton Riyadh</p>
+            <p className='text-[18px] sm:text-[24px] text-center font-semibold'>FII 2017 Future Investment Initiative Ritz Carlton Riyadh</p>
             <div className='w-full h-auto'>
                 <Image src={"/conference5.png"} alt='conference5' width={1000} height={350} className='w-full h-full' />
             </div>
-            <p className='text-[24px]'>Joy Awards 2022 ,Riyadh KSA</p>
+            <p className='text-[18px] sm:text-[24px] text-center font-semibold'>Joy Awards 2022 ,Riyadh KSA</p>
             <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 <div className='w-full h-auto'>
                     <Image src={"/conference6.png"} alt='conference6' width={360} height={280} className='w-full h-[270px]' />
@@ -144,7 +144,7 @@ const Achievements = () => {
                 <div className='w-full h-auto'>
                     <Image src={"/conference7.png"} alt='conference7' width={360} height={280} className='w-full h-[270px]' />
                 </div>
-                <div className='w-full h-auto'>
+                <div className='w-full h-auto col-span-1 md:col-span-2 lg:col-span-1'>
                     <Image src={"/conference8.png"} alt='conference8' width={360} height={280} className='w-full h-[270px]' />
                 </div>
             </div>

@@ -2,8 +2,8 @@ import React from 'react'
 
 const Counts = () => {
     return (
-        <div className='min-h-[300px] flex items-center justify-center bg-black text-[#d4c492]'>
-            <div className='w-full flex justify-between items-center px-40'>
+        <div className='min-h-[300px] flex items-center justify-center bg-black text-[#d4c492] py-5 md:py-0'>
+            <div className='w-full flex flex-col justify-between items-center px-6 md:flex-row lg:px-20 xl:px-40'>
                 <div className='flex flex-col justify-center items-center gap-2'>
                     <p className='text-[70px] font-semibold'>400+</p>
                     <p className='text-[17px] text-[#968152]'>Guests satisfied</p>

@@ -2,9 +2,9 @@ import React from 'react'
 
 const Experties = () => {
     return (
-        <div className='px-40 py-16 flex flex-col justify-center items-center gap-12 bg-gridBg'>
-            <h2 className='text-[56px] font-semibold'>Our Experties</h2>
-            <div className='grid grid-cols-3 gap-6'>
+        <div className='py-4 flex flex-col justify-center items-center gap-4 md:gap-12 bg-gridBg px-6 lg:px-20 lg:py-16 xl:px-40'>
+            <h2 className='text-[32px] sm:text-[56px] font-semibold'>Our Experties</h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 <div className='bg-[#f7f7f8] p-6 flex flex-col gap-4 rounded-lg'>
                     <p className='text-[#d4c492] text-[38px]'>01</p>
                     <p className='font-semibold text-[17px] text-[#121217]'>Distinctive and available 24/7 service</p>
