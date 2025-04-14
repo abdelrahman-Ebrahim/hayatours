@@ -1,31 +1,58 @@
-import React from 'react'
+'use client'; 
+
+import React, { useRef, useEffect } from 'react';
+import { motion, useAnimation, useInView } from 'framer-motion';
 
 const Counts = () => {
-    return (
-        <div className='min-h-[300px] flex items-center justify-center bg-black text-[#d4c492] py-5 md:py-0'>
-            <div className='w-full flex flex-col justify-between items-center px-6 md:flex-row lg:px-20 xl:px-40'>
-                <div className='flex flex-col justify-center items-center gap-2'>
-                    <p className='text-[70px] font-semibold'>400+</p>
-                    <p className='text-[17px] text-[#968152]'>Guests satisfied</p>
-                </div>
-                <div className='flex flex-col justify-center items-center gap-2'>
-                    <p className='text-[70px] font-semibold'>1300+</p>
-                    <p className='text-[17px] text-[#968152]'>Trips completed</p>
-                </div>
-                <div className='flex flex-col justify-center items-center gap-2'>
-                    <p className='text-[70px] font-semibold'>50+</p>
-                    <p className='text-[17px] text-[#968152]'>Events covered</p>
-                </div>
-                <div className='flex flex-col justify-center items-center gap-2'>
-                    <p className='text-[70px] font-semibold'>50+
-                    </p>
-                    <p className='text-[17px] text-[#968152]'>Exhibitions attended
-                    </p>
-                </div>
-            </div>
-        </div>
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.3 });
 
-    )
-}
+  const controls = useAnimation();
 
-export default Counts
+  useEffect(() => {
+    if (isInView) {
+      controls.start(i => ({
+        opacity: 1,
+        y: 0,
+        transition: { delay: i * 0.2, duration: 0.6 },
+      }));
+    } else {
+      controls.start(i => ({
+        opacity: 0,
+        y: 30,
+        transition: { delay: i * 0.2, duration: 0.6 },
+      }));
+    }
+  }, [isInView, controls]);
+
+  const stats = [
+    { count: '400+', label: 'Guests satisfied' },
+    { count: '1300+', label: 'Trips completed' },
+    { count: '50+', label: 'Events covered' },
+    { count: '50+', label: 'Exhibitions attended' },
+  ];
+
+  return (
+    <div
+      ref={ref}
+      className="min-h-[300px] flex items-center justify-center bg-black text-[#d4c492] py-5 md:py-0"
+    >
+      <div className="w-full flex flex-col justify-between items-center px-6 md:flex-row lg:px-20 xl:px-40">
+        {stats.map((item, index) => (
+          <motion.div
+            key={index}
+            custom={index}
+            initial={{ opacity: 0, y: 30 }}
+            animate={controls}
+            className="flex flex-col justify-center items-center gap-2"
+          >
+            <p className="text-[70px] font-semibold">{item.count}</p>
+            <p className="text-[17px] text-[#968152]">{item.label}</p>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Counts;

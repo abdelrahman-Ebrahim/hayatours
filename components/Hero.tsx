@@ -1,24 +1,57 @@
 import Image from "next/image";
+import { motion, useAnimation } from "framer-motion";
+import { useRef, useEffect } from "react";
+import { useInView } from "framer-motion";
 
-// Define the type for the scrollToRefs object
 interface HeroProps {
   scrollToRefs: {
-    about: React.RefObject<HTMLDivElement | null>;  // Allow for null
-    fleet: React.RefObject<HTMLDivElement | null>;  // Allow for null
-    achievements: React.RefObject<HTMLDivElement | null>;  // Allow for null
-    services: React.RefObject<HTMLDivElement | null>;  // Allow for null
-    contact: React.RefObject<HTMLDivElement | null>;  // Allow for null
+    about: React.RefObject<HTMLDivElement | null>;
+    fleet: React.RefObject<HTMLDivElement | null>;
+    achievements: React.RefObject<HTMLDivElement | null>;
+    services: React.RefObject<HTMLDivElement | null>;
+    contact: React.RefObject<HTMLDivElement | null>;
   };
 }
 
 export default function Hero({ scrollToRefs }: HeroProps) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { amount: 0.3 }); // triggers when 30% in view
+
+  const logoControls = useAnimation();
+  const buttonControls = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      logoControls.start({ opacity: 1, x: 0 });
+      buttonControls.start({ opacity: 1, x: 0 });
+    } else {
+      logoControls.start({ opacity: 0, x: -50 });
+      buttonControls.start({ opacity: 0, x: 50 });
+    }
+  }, [inView, logoControls, buttonControls]);
+
   return (
-    <div className="my-5 py-5 w-full h-auto bg-heroBg bg-cover bg-no-repeat flex items-center md:py-0 md:h-[300px]">
+    <div
+      ref={ref}
+      className="my-5 py-5 w-full h-auto bg-heroBg bg-cover bg-no-repeat flex items-center md:py-0 md:h-[300px]"
+    >
       <div className="w-full flex flex-col items-center justify-between gap-6 px-4 lg:flex-row lg:px-20">
-        <div>
+        {/* Logo animation */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={logoControls}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <Image src={"/hayatLogo.png"} alt="logo" width={175} height={175} />
-        </div>
-        <div className="flex flex-col items-center gap-4 md:flex-row">
+        </motion.div>
+
+        {/* Button group animation */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={buttonControls}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          className="flex flex-col items-center gap-4 md:flex-row"
+        >
           <button
             onClick={() => scrollToRefs.about.current?.scrollIntoView({ behavior: "smooth" })}
             className="bg-[#968152] py-2 px-4 text-white text-xl font-semibold rounded-lg transition-all duration-300 hover:bg-[#8b7036] min-w-[160px] md:min-w-fit"
@@ -49,7 +82,7 @@ export default function Hero({ scrollToRefs }: HeroProps) {
           >
             Contact
           </button>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
