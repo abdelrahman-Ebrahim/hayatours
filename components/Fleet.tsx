@@ -42,7 +42,7 @@ const Fleet = () => {
 
       {/* Image Grid Animation */}
       <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-        {[...Array(9)].map((_, index) => (
+        {[...Array(7)].map((_, index) => (
           <motion.div
             key={index}
             className='lg:w-[320px] xl:w-[364px] h-auto'
