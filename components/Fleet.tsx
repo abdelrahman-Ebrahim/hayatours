@@ -6,11 +6,15 @@ const Fleet = () => {
   return (
     <div className='py-4 flex flex-col justify-center items-center gap-4 bg-gridBg px-4 lg:gap-6 xl:px-16 lg:py-16'>
       {/* Title Animation */}
-      <h2
+      <motion.h2
         className='text-[32px] sm:text-[56px] font-semibold'
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.3 }}
       >
         Our Fleet
-      </h2>
+      </motion.h2>
 
       {/* Description Animation */}
       <motion.p
@@ -24,20 +28,28 @@ const Fleet = () => {
       </motion.p>
 
       {/* Vehicle List Animation */}
-      <div
+      <motion.div
         className='flex flex-col justify-center items-center lg:flex-row lg:gap-4 xl:gap-6'
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.3, delay: 0.3 }}
       >
         <p className='font-semibold text-xs sm:text-base'>• Luxury Cars (Mercedes S-Class – BMW – Lexus)</p>
         <p className='font-semibold text-xs sm:text-base'>• Family Cars (GMC Yukon – Chevrolet Tahoe)</p>
         <p className='font-semibold text-xs sm:text-base'>• Mid-size Cars (Ford Taurus – Impala)</p>
-      </div>
+      </motion.div>
 
       {/* Image Grid Animation */}
       <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
         {[...Array(7)].map((_, index) => (
-          <div
+          <motion.div
             key={index}
             className='lg:w-[320px] xl:w-[364px] h-auto'
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
           >
             <Image
               src={`/Fleet${index + 1}.png`}
@@ -46,7 +58,7 @@ const Fleet = () => {
               height={430}
               className='w-full h-[364px]'
             />
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

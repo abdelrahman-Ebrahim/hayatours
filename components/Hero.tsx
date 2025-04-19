@@ -37,13 +37,19 @@ export default function Hero({ scrollToRefs }: HeroProps) {
     >
       <div className="w-full flex flex-col items-center justify-between gap-6 px-4 lg:flex-row lg:px-20">
         {/* Logo animation */}
-        <div
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={logoControls}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <Image src={"/hayatLogo.png"} alt="logo" width={175} height={175} />
-        </div>
+        </motion.div>
 
         {/* Button group animation */}
-        <div
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={buttonControls}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           className="flex flex-col items-center gap-4 md:flex-row"
         >
           <button
@@ -76,7 +82,7 @@ export default function Hero({ scrollToRefs }: HeroProps) {
           >
             Contact
           </button>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
