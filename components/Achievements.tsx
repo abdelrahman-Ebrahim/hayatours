@@ -77,7 +77,10 @@ const Achievements = () => {
                 {[...Array(18)].map((_, index) => (
                     <motion.div
                         key={index}
-                        className='bg-gradient-to-r from-[#d4c492] to-[#ffffff] p-6 rounded-lg shadow-xl transform transition-all hover:scale-105 hover:shadow-2xl hover:rotate-1'
+                        className={`p-6 rounded-lg shadow-xl transform transition-all hover:scale-105 hover:shadow-2xl hover:rotate-1 ${index % 2 === 0
+                                ? 'bg-gradient-to-r from-[#d4c492] to-[#ffffff]'
+                                : 'bg-gradient-to-r from-[#F5913C] to-[#2B8D6E]'
+                            }`}
                         variants={staggerItem}
                     >
                         {/* Your existing achievement cards content */}
