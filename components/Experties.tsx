@@ -74,11 +74,8 @@ const Experties = () => {
       <h2 className="text-[32px] sm:text-[56px] font-semibold">Our Experties</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {cardData.map((item, index) => (
-          <motion.div
+          <div
             key={index}
-            custom={index}
-            initial={{ opacity: 0, y: 30 }}
-            animate={controls}
             className={`p-6 flex flex-col gap-4 rounded-lg ${
               item.highlighted ? 'bg-[#2B8D6E]' : ' bg-[#2E3192]'
             }`}
@@ -86,7 +83,7 @@ const Experties = () => {
             <p className="text-[#d4c492] text-[38px]">{item.number}</p>
             <p className="font-semibold text-[17px] text-white">{item.title}</p>
             <p className="text-sm text-white">{item.content}</p>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

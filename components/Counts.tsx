@@ -39,16 +39,13 @@ const Counts = () => {
     >
       <div className="w-full flex flex-col justify-between items-center px-6 md:flex-row lg:px-20 xl:px-40">
         {stats.map((item, index) => (
-          <motion.div
+          <div
             key={index}
-            custom={index}
-            initial={{ opacity: 0, y: 30 }}
-            animate={controls}
             className="flex flex-col justify-center items-center gap-2"
           >
             <p className="text-[70px] font-semibold">{item.count}</p>
             <p className="text-[17px] text-[#968152]">{item.label}</p>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

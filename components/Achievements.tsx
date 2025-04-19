@@ -46,42 +46,34 @@ const Achievements = () => {
     return (
         <div className='px-4 py-4 flex flex-col justify-center items-center gap-4 md:gap-6 bg-gridBg md:px-16 md:py-16'>
             {/* Title Section */}
-            <motion.div
+            <div
                 ref={titleRef}
-                initial="hidden"
-                animate={isTitleInView ? "visible" : "hidden"}
                 className='flex flex-col justify-center items-center gap-4 w-full'
             >
                 <motion.h2
                     className='text-[32px] sm:text-[56px] font-semibold'
-                    variants={fadeUp}
                 >
                     Achievements
                 </motion.h2>
                 <motion.p
                     className='text-[18px] sm:text-[24px] text-center'
-                    variants={fadeUp}
                 >
                     Celebrating our success and milestones
                 </motion.p>
-            </motion.div>
+            </div>
 
             {/* Achievements Grid */}
-            <motion.div
+            <div
                 ref={achievementsRef}
                 className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-                initial="hidden"
-                animate={isAchievementsInView ? "visible" : "hidden"}
-                variants={staggerContainer}
             >
                 {[...Array(18)].map((_, index) => (
-                    <motion.div
+                    <div
                         key={index}
                         className={`p-6 rounded-lg shadow-xl transform transition-all hover:scale-105 hover:shadow-2xl hover:rotate-1 ${index % 2 === 0
                                 ? 'bg-gradient-to-r from-[#d4c492] to-[#ffffff]'
                                 : 'bg-gradient-to-r from-[#F5913C] to-[#2B8D6E]'
                             }`}
-                        variants={staggerItem}
                     >
                         {/* Your existing achievement cards content */}
                         {/* Achievement 1 */}
@@ -210,127 +202,121 @@ const Achievements = () => {
 
                             </>
                         )}
-                    </motion.div>
+                    </div>
                 ))}
-            </motion.div>
+            </div>
 
             {/* Conference 1 Section */}
-            <motion.div
+            <div
                 ref={conf1Ref}
-                initial="hidden"
-                animate={isConf1InView ? "visible" : "hidden"}
+                
+
                 className='w-full flex flex-col gap-4'
             >
                 <motion.p
                     className='text-[18px] sm:text-[24px] text-center font-semibold'
-                    variants={fadeUp}
                 >
                     Meetings of the 46th session of the Council of Arab Ministers of Youth and Sports
                 </motion.p>
-                <motion.div
+                <div
                     className='w-full h-auto'
-                    variants={fadeUp}
                 >
                     <Image src={"/conference1.png"} alt='conference1' width={1000} height={350} className='w-full h-full' />
-                </motion.div>
-            </motion.div>
+                </div>
+            </div>
 
             {/* Conference 2 Section */}
-            <motion.div
+            <div
                 ref={conf2Ref}
-                initial="hidden"
-                animate={isConf2InView ? "visible" : "hidden"}
+                
+               
                 className='w-full flex flex-col gap-4'
             >
                 <motion.p
                     className='text-[18px] sm:text-[24px] text-center font-semibold'
-                    variants={fadeUp}
                 >
                     Global Summit of the General Aviation 2016
                 </motion.p>
-                <motion.div
+                <div
                     className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
-                    variants={staggerContainer}
+                    
                 >
-                    <motion.div
+                    <div
                         className='w-full h-auto'
-                        variants={staggerItem}
+                       
                     >
                         <Image src={"/conference2.png"} alt='conference2' width={360} height={280} className='w-full h-full' />
-                    </motion.div>
-                    <motion.div
+                    </div>
+                    <div
                         className='w-full h-auto'
-                        variants={staggerItem}
+                        
                     >
                         <Image src={"/conference3.png"} alt='conference3' width={360} height={280} className='w-full h-full' />
-                    </motion.div>
-                    <motion.div
+                    </div>
+                    <div
                         className='w-full h-auto col-span-1 md:col-span-2 lg:col-span-1'
-                        variants={staggerItem}
+                        
                     >
                         <Image src={"/conference4.png"} alt='conference4' width={360} height={280} className='w-full h-full' />
-                    </motion.div>
-                </motion.div>
-            </motion.div>
+                    </div>
+                </div>
+            </div>
 
             {/* Conference 3 Section */}
-            <motion.div
+            <div
                 ref={conf3Ref}
-                initial="hidden"
-                animate={isConf3InView ? "visible" : "hidden"}
+                
+                
                 className='w-full flex flex-col gap-4'
             >
                 <motion.p
                     className='text-[18px] sm:text-[24px] text-center font-semibold'
-                    variants={fadeUp}
                 >
                     FII 2017 Future Investment Initiative Ritz Carlton Riyadh
                 </motion.p>
-                <motion.div
+                <div
                     className='w-full h-auto'
-                    variants={fadeUp}
                 >
                     <Image src={"/conference5.png"} alt='conference5' width={1000} height={350} className='w-full h-full' />
-                </motion.div>
-            </motion.div>
+                </div>
+            </div>
 
             {/* Conference 4 Section */}
-            <motion.div
+            <div
                 ref={conf4Ref}
-                initial="hidden"
-                animate={isConf4InView ? "visible" : "hidden"}
+                
+                
                 className='w-full flex flex-col gap-4'
             >
                 <motion.p
                     className='text-[18px] sm:text-[24px] text-center font-semibold'
-                    variants={fadeUp}
                 >
                     Joy Awards 2022 ,Riyadh KSA
                 </motion.p>
-                <motion.div
+                <div
                     className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
-                    variants={staggerContainer}
+                    
                 >
-                    <motion.div
+                    <div
                         className='w-full h-auto'
-                        variants={staggerItem}
+                       
                     >
                         <Image src={"/conference6.png"} alt='conference6' width={360} height={280} className='w-full h-[270px]' />
-                    </motion.div>
-                    <motion.div
+                    </div>
+                    <div
                         className='w-full h-auto'
-                        variants={staggerItem}
+                       
                     >
                         <Image src={"/conference7.png"} alt='conference7' width={360} height={280} className='w-full h-[270px]' />
-                    </motion.div>
-                    <motion.div
+                    </div>
+                    <div
                         className='w-full h-auto col-span-1 md:col-span-2 lg:col-span-1'
-                        variants={staggerItem}
+                       
                     >
                         <Image src={"/conference8.png"} alt='conference8' width={360} height={280} className='w-full h-[270px]' />
-                    </motion.div>
-                </motion.div>
-            </motion.div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
