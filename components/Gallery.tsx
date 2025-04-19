@@ -28,7 +28,7 @@ const Gallery = () => {
   return (
     <div 
       ref={ref}
-      className='bg-[#E8E8E8] w-full flex flex-col items-center justify-center gap-6 px-4 pb-4 text-white py-4 md:pt-0 md:pb-4 md:flex-row lg:px-12'
+      className='w-full flex flex-col items-center justify-center gap-6 px-4 pb-4 text-white py-4 md:pt-0 md:pb-4 md:flex-row lg:px-12'
     >
       {/* First Gallery Item */}
       <motion.div 

@@ -80,12 +80,12 @@ const Experties = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={controls}
             className={`p-6 flex flex-col gap-4 rounded-lg ${
-              item.highlighted ? 'bg-[#f7f7f8]' : ''
+              item.highlighted ? 'bg-[#2B8D6E]' : ' bg-[#2E3192]'
             }`}
           >
             <p className="text-[#d4c492] text-[38px]">{item.number}</p>
-            <p className="font-semibold text-[17px] text-[#121217]">{item.title}</p>
-            <p className="text-sm text-[#3f3f50]">{item.content}</p>
+            <p className="font-semibold text-[17px] text-white">{item.title}</p>
+            <p className="text-sm text-white">{item.content}</p>
           </motion.div>
         ))}
       </div>
