@@ -167,7 +167,7 @@ const Achievements = () => {
                         )}
                         {index === 12 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2019: Middle East Concert</p>
+                                <p className='font-semibold text-[18px] text-black'>2019: MdlBeast Concert</p>
                                 <p className='text-sm text-black opacity-80'>A memorable concert bringing together stars from across the Middle East.</p>
 
                             </>
