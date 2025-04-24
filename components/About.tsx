@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 const About = () => {
   const ref = useRef(null);
@@ -9,6 +10,8 @@ const About = () => {
 
   const headingControls = useAnimation();
   const paragraphControls = useAnimation();
+
+  const t = useTranslations("About");
 
   useEffect(() => {
     if (isInView) {
@@ -36,7 +39,7 @@ const About = () => {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           className="text-[24px] sm:text-[38px] font-semibold"
         >
-          Who are we?
+          {t("whoAreWe")}
         </motion.h1>
 
         <motion.p
@@ -45,10 +48,10 @@ const About = () => {
           transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
           className="max-w-[650px] text-sm sm:text-[17px]"
         >
-          At Hayat Tours, we take pride in being a leading provider of limousine and logistical services for delegations in Saudi Arabia. We offer the best transportation solutions, including pickups, immediate and written translation services, all tailored to meet your needs. <br /> <br />
-          What sets us apart from other providers is the high quality of service we deliver. Our limousine company has become a trusted name in luxury transportation, striving to make each journey a unique experience for our clients. <br />
-          Our fleet is diverse, featuring the latest luxury vehicles maintained with great care and driven by professional chauffeurs. <br /> <br /> We also offer cost-effective transportation solutions through our efficient car management system, ensuring top-quality service at all times. <br />
-          Every service is designed to leave a lasting impression, and we are always here to provide you with the best options for your transportation needs.
+          {t("aboutLine1")} <br /> <br />
+          {t("aboutLine2")}<br />
+          {t("aboutLine3")} <br /> <br /> {t("aboutLine4")} <br />
+          {t("aboutLine5")}
         </motion.p>
       </div>
     </div>

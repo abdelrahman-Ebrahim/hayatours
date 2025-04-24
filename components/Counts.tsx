@@ -2,12 +2,15 @@
 
 import React, { useRef, useEffect } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 const Counts = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.3 });
 
   const controls = useAnimation();
+
+  const t = useTranslations("Count");
 
   useEffect(() => {
     if (isInView) {
@@ -26,10 +29,10 @@ const Counts = () => {
   }, [isInView, controls]);
 
   const stats = [
-    { count: '400+', label: 'Guests satisfied' },
-    { count: '1300+', label: 'Trips completed' },
-    { count: '50+', label: 'Events covered' },
-    { count: '50+', label: 'Exhibitions attended' },
+    { count: t("count1"), label: t("guests") },
+    { count: t("count2"), label: t("trips") },
+    { count: t("count3"), label: t("events") },
+    { count: t("count4"), label: t("exhibitions") },
   ];
 
   return (

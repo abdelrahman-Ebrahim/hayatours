@@ -3,11 +3,14 @@
 import Image from 'next/image';
 import React, { useRef, useEffect } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 const Gallery = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.2 });
   const controls = useAnimation();
+
+  const t = useTranslations("Gallery");
 
   useEffect(() => {
     if (isInView) {
@@ -38,8 +41,7 @@ const Gallery = () => {
           <Image src={"/gallery1.jpg"} alt='gallery-1' fill />
           <div className="absolute inset-0 bg-black opacity-50" />
         </div>
-        <p className='lg:text-[26px] text-center z-10 px-2 lg:px-4'>We look forward to serving you and
-          meeting your needs.</p>
+        <p className='lg:text-[26px] text-center z-10 px-2 lg:px-4'>{t("card1")}</p>
       </div>
 
       {/* Second Gallery Item */}
@@ -50,7 +52,7 @@ const Gallery = () => {
           <Image src={"/gallery2.jpg"} alt='gallery-2' fill />
           <div className="absolute inset-0 bg-black opacity-50" />
         </div>
-        <p className='lg:text-[26px] text-center z-10 px-2 lg:px-4'>We work diligently to achieve customer satisfaction and provide an exceptional travel experience.</p>
+        <p className='lg:text-[26px] text-center z-10 px-2 lg:px-4'>{t("card2")}</p>
       </div>
 
       {/* Third Gallery Item */}
@@ -61,7 +63,7 @@ const Gallery = () => {
           <Image src={"/gallery3.jpg"} alt='gallery-3' fill />
           <div className="absolute inset-0 bg-black opacity-50" />
         </div>
-        <p className='lg:text-[26px] text-center z-10 px-2 lg:px-4'>We are proud to own a fleet of the finest vehicles with professional drivers.</p>
+        <p className='lg:text-[26px] text-center z-10 px-2 lg:px-4'>{t("card3")}</p>
       </div>
     </div>
   );

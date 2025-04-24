@@ -2,6 +2,9 @@ import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useRef, useEffect } from "react";
 import { useInView } from "framer-motion";
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface HeroProps {
   scrollToRefs: {
@@ -15,10 +18,12 @@ interface HeroProps {
 
 export default function Hero({ scrollToRefs }: HeroProps) {
   const ref = useRef(null);
-  const inView = useInView(ref, { amount: 0.3 }); // triggers when 30% in view
-
+  const inView = useInView(ref, { amount: 0.3 });
   const logoControls = useAnimation();
   const buttonControls = useAnimation();
+  const t = useTranslations("Hero");
+  const locale = useLocale();
+  const pathname = usePathname();
 
   useEffect(() => {
     if (inView) {
@@ -29,6 +34,9 @@ export default function Hero({ scrollToRefs }: HeroProps) {
       buttonControls.start({ opacity: 0, x: 50 });
     }
   }, [inView, logoControls, buttonControls]);
+
+  // Remove the locale from the pathname
+  const pathWithoutLocale = pathname.replace(`/${locale}`, "");
 
   return (
     <div
@@ -41,6 +49,7 @@ export default function Hero({ scrollToRefs }: HeroProps) {
           initial={{ opacity: 0, x: -50 }}
           animate={logoControls}
           transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex items-center gap-4"
         >
           <Image src={"/hayatLogo.png"} alt="logo" width={175} height={175} />
         </motion.div>
@@ -56,32 +65,41 @@ export default function Hero({ scrollToRefs }: HeroProps) {
             onClick={() => scrollToRefs.about.current?.scrollIntoView({ behavior: "smooth" })}
             className="bg-[#968152] py-2 px-4 text-white text-xl font-semibold rounded-lg transition-all duration-300 hover:bg-[#8b7036] min-w-[160px] md:min-w-fit"
           >
-            About us
+            {t("aboutUs")}
           </button>
           <button
             onClick={() => scrollToRefs.fleet.current?.scrollIntoView({ behavior: "smooth" })}
             className="bg-[#968152] py-2 px-4 text-white text-xl font-semibold rounded-lg transition-all duration-300 hover:bg-[#8b7036] min-w-[160px] md:min-w-fit"
           >
-            Fleet
+            {t("fleet")}
           </button>
           <button
             onClick={() => scrollToRefs.achievements.current?.scrollIntoView({ behavior: "smooth" })}
             className="bg-[#968152] py-2 px-4 text-white text-xl font-semibold rounded-lg transition-all duration-300 hover:bg-[#8b7036] min-w-[160px] md:min-w-fit"
           >
-            Achievements
+            {t("achievments")}
           </button>
           <button
             onClick={() => scrollToRefs.services.current?.scrollIntoView({ behavior: "smooth" })}
             className="bg-[#968152] py-2 px-4 text-white text-xl font-semibold rounded-lg transition-all duration-300 hover:bg-[#8b7036] min-w-[160px] md:min-w-fit"
           >
-            Services
+            {t("services")}
           </button>
           <button
             onClick={() => scrollToRefs.contact.current?.scrollIntoView({ behavior: "smooth" })}
             className="bg-[#968152] py-2 px-4 text-white text-xl font-semibold rounded-lg transition-all duration-300 hover:bg-[#8b7036] min-w-[160px] md:min-w-fit"
           >
-            Contact
+            {t("contact")}
           </button>
+
+            {/* Language switcher button */}
+            <Link 
+            href={`/${locale === 'en' ? 'ar' : 'en'}${pathWithoutLocale}`}
+            className="bg-white text-[#968152] py-2 px-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:bg-gray-100 border border-[#968152] flex items-center gap-2"
+          >
+            {locale === 'en' ? 'ع' : 'EN'}
+            <Image src={"/globe.svg"} alt="language" width={20} height={20}/>
+          </Link>
         </motion.div>
       </div>
     </div>

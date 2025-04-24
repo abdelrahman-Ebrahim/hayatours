@@ -1,8 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 
 const Fleet = () => {
+
+  const t = useTranslations("Fleet");
+
   return (
     <div className='py-4 flex flex-col justify-center items-center gap-4 bg-gridBg px-4 lg:gap-6 xl:px-16 lg:py-16'>
       {/* Title Animation */}
@@ -13,7 +17,7 @@ const Fleet = () => {
         viewport={{ once: false }}
         transition={{ duration: 0.3 }}
       >
-        Our Fleet
+        {t("ourFleet")}
       </motion.h2>
 
       {/* Description Animation */}
@@ -24,7 +28,7 @@ const Fleet = () => {
         viewport={{ once: false }}
         transition={{ duration: 0.3, delay: 0.3 }}
       >
-        Choose from our diverse fleet of high-quality vehicles tailored to your needs.
+       {t("chooseFleet")}
       </motion.p>
 
       {/* Vehicle List Animation */}
@@ -35,9 +39,9 @@ const Fleet = () => {
         viewport={{ once: false }}
         transition={{ duration: 0.3, delay: 0.3 }}
       >
-        <p className='font-semibold text-xs sm:text-base'>• Luxury Cars (Mercedes S-Class – BMW – Lexus)</p>
-        <p className='font-semibold text-xs sm:text-base'>• Family Cars (GMC Yukon – Chevrolet Tahoe)</p>
-        <p className='font-semibold text-xs sm:text-base'>• Mid-size Cars (Ford Taurus – Impala)</p>
+        <p className='font-semibold text-xs sm:text-base'>{t("option1")}</p>
+        <p className='font-semibold text-xs sm:text-base'>{t("option2")}</p>
+        <p className='font-semibold text-xs sm:text-base'>{t("option3")}</p>
       </motion.div>
 
       {/* Image Grid Animation */}

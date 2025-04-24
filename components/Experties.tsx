@@ -2,53 +2,50 @@
 
 import React, { useRef, useEffect } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
-const cardData = [
-  {
-    number: '01',
-    title: 'Distinctive and available 24/7 service',
-    content:
-      'We provide a 24/7 service to ensure that we meet your transportation needs at any time you require. We also strive to provide vehicles as quickly as possible to ensure your comfort and ease of travel.',
-    highlighted: true,
-  },
-  {
-    number: '02',
-    title: 'Competitive prices',
-    content:
-      'We offer high-quality service at affordable and competitive prices. We are committed to providing excellent value for our customers and ensuring their complete satisfaction',
-  },
-  {
-    number: '03',
-    title: 'Travel outside the Kingdom',
-    content:
-      'If you are planning to travel to Bahrain, the United Arab Emirates, or any destination outside the Kingdom, we provide intercountry transportation services...',
-    highlighted: true,
-  },
-  {
-    number: '04',
-    title: 'Airport reception and departure Service',
-    content:
-      'We provide airport pickup service to greet you upon your arrival and transport you to your intended destination...',
-  },
-  {
-    number: '05',
-    title: 'Delivery service with driver',
-    content:
-      'We offer a car rental service with professional and trained drivers to ensure your comfort and safety during your travels...',
-    highlighted: true,
-  },
-  {
-    number: '06',
-    title: 'VIP guests and special occasions',
-    content:
-      'We specialize in receiving diplomatic delegations, organizing royal ceremonies, and welcoming distinguished guests...',
-  },
-];
 
 const Experties = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.2 });
   const controls = useAnimation();
+  const t = useTranslations("Experties");
+
+  const cardData = [
+    {
+      number: t("number1"),
+      title: t("title1"),
+      content: t("content1"),
+      highlighted: true,
+    },
+    {
+      number: t("number2"),
+      title: t("title2"),
+      content: t("content2"),
+    },
+    {
+      number: t("number3"),
+      title: t("title3"),
+      content: t("content3"),
+      highlighted: true,
+    },
+    {
+      number: t("number4"),
+      title: t("title4"),
+      content: t("content4"),
+    },
+    {
+      number: t("number5"),
+      title: t("title5"),
+      content: t("content5"),
+      highlighted: true,
+    },
+    {
+      number: t("number6"),
+      title: t("title6"),
+      content: t("content6"),
+    },
+  ];
 
   useEffect(() => {
     if (isInView) {
@@ -71,7 +68,7 @@ const Experties = () => {
       ref={ref}
       className="py-4 flex flex-col justify-center items-center gap-4 md:gap-12 bg-gridBg px-6 lg:px-20 lg:py-16 xl:px-40"
     >
-      <h2 className="text-[32px] sm:text-[56px] font-semibold">Our Experties</h2>
+      <h2 className="text-[32px] sm:text-[56px] font-semibold">{t("ourExperties")}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {cardData.map((item, index) => (
           <motion.div
@@ -83,7 +80,7 @@ const Experties = () => {
               item.highlighted ? 'bg-[#f7f7f8]' : ''
             }`}
           >
-            <p className="text-[#d4c492] text-[38px]">{item.number}</p>
+            <p className="text-[#af8d25] text-[38px]">{item.number}</p>
             <p className="font-semibold text-[17px] text-[#121217]">{item.title}</p>
             <p className="text-sm text-[#3f3f50]">{item.content}</p>
           </motion.div>

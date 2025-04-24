@@ -3,8 +3,11 @@
 import Image from 'next/image';
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 const Achievements = () => {
+    const t = useTranslations("Achievements");
+
     // Refs for each conference section
     const titleRef = useRef(null);
     const achievementsRef = useRef(null);
@@ -56,13 +59,13 @@ const Achievements = () => {
                     className='text-[32px] sm:text-[56px] font-semibold'
                     variants={fadeUp}
                 >
-                    Achievements
+                    {t("achievements")}
                 </motion.h2>
                 <motion.p
                     className='text-[18px] sm:text-[24px] text-center'
                     variants={fadeUp}
                 >
-                    Celebrating our success and milestones
+                    {t("subTitle")}
                 </motion.p>
             </motion.div>
 
@@ -87,126 +90,126 @@ const Achievements = () => {
                         {/* Achievement 1 */}
                         {index === 0 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2015: The World Civil Aviation Conference</p>
-                                <p className='text-sm text-black opacity-80'>A significant global event in aviation hosted in 2015.</p>
+                                <p className='font-semibold text-[18px] text-black'>{t("ach1")}</p>
+                                <p className='text-sm text-black opacity-80'>{t("det1")}</p>
                             </>
                         )}
                         {index === 1 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2015: King Abdulaziz International Quran Competition in Mecca</p>
-                                <p className='text-sm text-black opacity-80'>A prestigious event honoring the best reciters of the Quran.</p>
+                                <p className='font-semibold text-[18px] text-black'>{t("ach2")}</p>
+                                <p className='text-sm text-black opacity-80'>{t("det2")}</p>
 
                             </>
                         )}
                         {index === 2 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2016: Gulf Forum for Ministers of Labor</p>
-                                <p className='text-sm text-black opacity-80'>A conference aimed at improving labor relations in the Gulf region.</p>
+                                <p className='font-semibold text-[18px] text-black'>{t("ach3")}</p>
+                                <p className='text-sm text-black opacity-80'>{t("det3")}</p>
 
                             </>
                         )}
                         {index === 3 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2016: Future Investment Initiative</p>
-                                <p className='text-sm text-black opacity-80'>A groundbreaking initiative shaping the future of investment in the region.</p>
+                                <p className='font-semibold text-[18px] text-black'>{t("ach4")}</p>
+                                <p className='text-sm text-black opacity-80'>{t("det4")}</p>
 
                             </>
                         )}
                         {index === 4 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2016: Saudi Forum for Exhibition and Conference Industry</p>
-                                <p className='text-sm text-black opacity-80'>A platform for industry leaders to discuss the exhibition and conference sector.</p>
+                                <p className='font-semibold text-[18px] text-black'>{t("ach5")}</p>
+                                <p className='text-sm text-black opacity-80'>{t("det5")}</p>
 
                             </>
                         )}
                         {index === 5 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2016: The Islamic-Gulf-American Summit attended by President Donald Trump</p>
-                                <p className='text-sm text-black opacity-80'>A significant diplomatic summit with international implications.</p>
+                                <p className='font-semibold text-[18px] text-black'>{t("ach6")}</p>
+                                <p className='text-sm text-black opacity-80'>{t("det6")}</p>
 
                             </>
                         )}
                         {index === 6 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2017: Misk Global Forum</p>
-                                <p className='text-sm text-black opacity-80'>A global platform for inspiring young minds and leadership.</p>
+                                <p className='font-semibold text-[18px] text-black'>{t("ach7")}</p>
+                                <p className='text-sm text-black opacity-80'>{t("det7")}</p>
 
                             </>
                         )}
                         {index === 7 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2017: Poet of the Million in Riyadh</p>
-                                <p className='text-sm text-black opacity-80'>A prestigious cultural event in Riyadh celebrating poetry.</p>
+                                <p className='font-semibold text-[18px] text-black'>{t("ach8")}</p>
+                                <p className='text-sm text-black opacity-80'>{t("det8")}</p>
 
                             </>
                         )}
                         {index === 8 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2018: Harvard University Delegation in Riyadh</p>
-                                <p className='text-sm text-black opacity-80'>A significant academic visit by Harvard University to Riyadh.</p>
+                                <p className='font-semibold text-[18px] text-black'>{t("ach9")}</p>
+                                <p className='text-sm text-black opacity-80'>{t("det9")}</p>
 
                             </>
                         )}
                         {index === 9 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2018: Misk Global Forum</p>
-                                <p className='text-sm text-black opacity-80'>An inspiring gathering of global leaders and thinkers at Misk Global Forum.</p>
+                                <p className='font-semibold text-[18px] text-black'>{t("ach10")}</p>
+                                <p className='text-sm text-black opacity-80'>{t("det10")}</p>
 
                             </>
                         )}
                         {index === 10 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2019: Misk Global Forum</p>
-                                <p className='text-sm text-black opacity-80'>Another year of excellence at the Misk Global Forum, furthering its impact.</p>
+                                <p className='font-semibold text-[18px] text-black'>{t("ach11")}</p>
+                                <p className='text-sm text-black opacity-80'>{t("det11")}</p>
 
                             </>
                         )}
                         {index === 11 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2019: Winter at Tantora in Al-Ula</p>
-                                <p className='text-sm text-black opacity-80'>A magical winter festival showcasing the culture of Al-Ula.</p>
+                                <p className='font-semibold text-[18px] text-black'>{t("ach12")}</p>
+                                <p className='text-sm text-black opacity-80'>{t("det12")}</p>
 
                             </>
                         )}
                         {index === 12 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2019: MdlBeast Concert</p>
-                                <p className='text-sm text-black opacity-80'>A memorable concert bringing together stars from across the Middle East.</p>
+                                <p className='font-semibold text-[18px] text-black'>{t("ach13")}</p>
+                                <p className='text-sm text-black opacity-80'>{t("det13")}</p>
 
                             </>
                         )}
                         {index === 13 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2022: Joway Award Ceremony in Riyadh</p>
-                                <p className='text-sm text-black opacity-80'>A prestigious award ceremony recognizing achievements in various fields.</p>
+                                <p className='font-semibold text-[18px] text-black'>{t("ach14")}</p>
+                                <p className='text-sm text-black opacity-80'>{t("det14")}</p>
 
                             </>
                         )}
                         {index === 14 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2023: Saudi-Omani Industries Exhibition</p>
-                                <p className='text-sm text-black opacity-80'>A significant exhibition showcasing industries from both Saudi Arabia and Oman.</p>
+                                <p className='font-semibold text-[18px] text-black'>{t("ach15")}</p>
+                                <p className='text-sm text-black opacity-80'>{t("det15")}</p>
 
                             </>
                         )}
                         {index === 15 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2023: Arab Youth and Sports Ministers Summit in Jeddah</p>
-                                <p className='text-sm text-black opacity-80'>A summit focused on youth empowerment and sports development in the Arab world.</p>
+                                <p className='font-semibold text-[18px] text-black'>{t("ach16")}</p>
+                                <p className='text-sm text-black opacity-80'>{t("det16")}</p>
 
                             </>
                         )}
                         {index === 16 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2023: Islamic Affairs Ministers Conference (Integration and Understanding) in Mecca</p>
-                                <p className='text-sm text-black opacity-80'>A conference aimed at fostering integration and understanding within Islamic communities.</p>
+                                <p className='font-semibold text-[18px] text-black'>{t("ach17")}</p>
+                                <p className='text-sm text-black opacity-80'>{t("det17")}</p>
 
                             </>
                         )}
                         {index === 17 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>2024: G20 Summit in Riyadh</p>
-                                <p className='text-sm text-black opacity-80'>A major global summit focusing on international cooperation and economic development.</p>
+                                <p className='font-semibold text-[18px] text-black'>{t("ach18")}</p>
+                                <p className='text-sm text-black opacity-80'>{t("det18")}</p>
 
                             </>
                         )}
@@ -225,7 +228,7 @@ const Achievements = () => {
                     className='text-[18px] sm:text-[24px] text-center font-semibold'
                     variants={fadeUp}
                 >
-                    Meetings of the 46th session of the Council of Arab Ministers of Youth and Sports
+                    {t("con1")}
                 </motion.p>
                 <motion.div
                     className='w-full h-auto'
@@ -246,7 +249,7 @@ const Achievements = () => {
                     className='text-[18px] sm:text-[24px] text-center font-semibold'
                     variants={fadeUp}
                 >
-                    Global Summit of the General Aviation 2016
+                    {t("con2")}
                 </motion.p>
                 <motion.div
                     className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
@@ -284,7 +287,7 @@ const Achievements = () => {
                     className='text-[18px] sm:text-[24px] text-center font-semibold'
                     variants={fadeUp}
                 >
-                    FII 2017 Future Investment Initiative Ritz Carlton Riyadh
+                    {t("con3")}
                 </motion.p>
                 <motion.div
                     className='w-full h-auto'
@@ -305,7 +308,7 @@ const Achievements = () => {
                     className='text-[18px] sm:text-[24px] text-center font-semibold'
                     variants={fadeUp}
                 >
-                    Joy Awards 2022 ,Riyadh KSA
+                    {t("con4")}
                 </motion.p>
                 <motion.div
                     className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
