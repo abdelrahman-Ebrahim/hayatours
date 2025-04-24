@@ -90,126 +90,126 @@ const Achievements = () => {
                         {/* Achievement 1 */}
                         {index === 0 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>{t("ach1")}</p>
-                                <p className='text-sm text-black opacity-80'>{t("det1")}</p>
+                                <p className='font-semibold text-[18px] text-black mb-2'>{t("ach1")}</p>
+                                <p className='font-medium text-black opacity-80'>{t("det1")}</p>
                             </>
                         )}
                         {index === 1 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>{t("ach2")}</p>
-                                <p className='text-sm text-black opacity-80'>{t("det2")}</p>
+                                <p className='font-semibold text-[18px] text-black mb-2'>{t("ach2")}</p>
+                                <p className='font-medium text-black opacity-80'>{t("det2")}</p>
 
                             </>
                         )}
                         {index === 2 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>{t("ach3")}</p>
-                                <p className='text-sm text-black opacity-80'>{t("det3")}</p>
+                                <p className='font-semibold text-[18px] text-black mb-2'>{t("ach3")}</p>
+                                <p className='font-medium text-black opacity-80'>{t("det3")}</p>
 
                             </>
                         )}
                         {index === 3 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>{t("ach4")}</p>
-                                <p className='text-sm text-black opacity-80'>{t("det4")}</p>
+                                <p className='font-semibold text-[18px] text-black mb-2'>{t("ach4")}</p>
+                                <p className='font-medium text-black opacity-80'>{t("det4")}</p>
 
                             </>
                         )}
                         {index === 4 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>{t("ach5")}</p>
-                                <p className='text-sm text-black opacity-80'>{t("det5")}</p>
+                                <p className='font-semibold text-[18px] text-black mb-2'>{t("ach5")}</p>
+                                <p className='font-medium text-black opacity-80'>{t("det5")}</p>
 
                             </>
                         )}
                         {index === 5 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>{t("ach6")}</p>
-                                <p className='text-sm text-black opacity-80'>{t("det6")}</p>
+                                <p className='font-semibold text-[18px] text-black mb-2'>{t("ach6")}</p>
+                                <p className='font-medium text-black opacity-80'>{t("det6")}</p>
 
                             </>
                         )}
                         {index === 6 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>{t("ach7")}</p>
-                                <p className='text-sm text-black opacity-80'>{t("det7")}</p>
+                                <p className='font-semibold text-[18px] text-black mb-2'>{t("ach7")}</p>
+                                <p className='font-medium text-black opacity-80'>{t("det7")}</p>
 
                             </>
                         )}
                         {index === 7 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>{t("ach8")}</p>
-                                <p className='text-sm text-black opacity-80'>{t("det8")}</p>
+                                <p className='font-semibold text-[18px] text-black mb-2'>{t("ach8")}</p>
+                                <p className='font-medium text-black opacity-80'>{t("det8")}</p>
 
                             </>
                         )}
                         {index === 8 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>{t("ach9")}</p>
-                                <p className='text-sm text-black opacity-80'>{t("det9")}</p>
+                                <p className='font-semibold text-[18px] text-black mb-2'>{t("ach9")}</p>
+                                <p className='font-medium text-black opacity-80'>{t("det9")}</p>
 
                             </>
                         )}
                         {index === 9 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>{t("ach10")}</p>
-                                <p className='text-sm text-black opacity-80'>{t("det10")}</p>
+                                <p className='font-semibold text-[18px] text-black mb-2'>{t("ach10")}</p>
+                                <p className='font-medium text-black opacity-80'>{t("det10")}</p>
 
                             </>
                         )}
                         {index === 10 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>{t("ach11")}</p>
-                                <p className='text-sm text-black opacity-80'>{t("det11")}</p>
+                                <p className='font-semibold text-[18px] text-black mb-2'>{t("ach11")}</p>
+                                <p className='font-medium text-black opacity-80'>{t("det11")}</p>
 
                             </>
                         )}
                         {index === 11 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>{t("ach12")}</p>
-                                <p className='text-sm text-black opacity-80'>{t("det12")}</p>
+                                <p className='font-semibold text-[18px] text-black mb-2'>{t("ach12")}</p>
+                                <p className='font-medium text-black opacity-80'>{t("det12")}</p>
 
                             </>
                         )}
                         {index === 12 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>{t("ach13")}</p>
-                                <p className='text-sm text-black opacity-80'>{t("det13")}</p>
+                                <p className='font-semibold text-[18px] text-black mb-2'>{t("ach13")}</p>
+                                <p className='font-medium text-black opacity-80'>{t("det13")}</p>
 
                             </>
                         )}
                         {index === 13 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>{t("ach14")}</p>
-                                <p className='text-sm text-black opacity-80'>{t("det14")}</p>
+                                <p className='font-semibold text-[18px] text-black mb-2'>{t("ach14")}</p>
+                                <p className='font-medium text-black opacity-80'>{t("det14")}</p>
 
                             </>
                         )}
                         {index === 14 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>{t("ach15")}</p>
-                                <p className='text-sm text-black opacity-80'>{t("det15")}</p>
+                                <p className='font-semibold text-[18px] text-black mb-2'>{t("ach15")}</p>
+                                <p className='font-medium text-black opacity-80'>{t("det15")}</p>
 
                             </>
                         )}
                         {index === 15 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>{t("ach16")}</p>
-                                <p className='text-sm text-black opacity-80'>{t("det16")}</p>
+                                <p className='font-semibold text-[18px] text-black mb-2'>{t("ach16")}</p>
+                                <p className='font-medium text-black opacity-80'>{t("det16")}</p>
 
                             </>
                         )}
                         {index === 16 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>{t("ach17")}</p>
-                                <p className='text-sm text-black opacity-80'>{t("det17")}</p>
+                                <p className='font-semibold text-[18px] text-black mb-2'>{t("ach17")}</p>
+                                <p className='font-medium text-black opacity-80'>{t("det17")}</p>
 
                             </>
                         )}
                         {index === 17 && (
                             <>
-                                <p className='font-semibold text-[18px] text-black'>{t("ach18")}</p>
-                                <p className='text-sm text-black opacity-80'>{t("det18")}</p>
+                                <p className='font-semibold text-[18px] text-black mb-2'>{t("ach18")}</p>
+                                <p className='font-medium text-black opacity-80'>{t("det18")}</p>
 
                             </>
                         )}

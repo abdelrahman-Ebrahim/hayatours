@@ -82,7 +82,7 @@ const Experties = () => {
           >
             <p className="text-[#af8d25] text-[38px]">{item.number}</p>
             <p className="font-semibold text-[17px] text-[#121217]">{item.title}</p>
-            <p className="text-sm text-[#3f3f50]">{item.content}</p>
+            <p className="font-medium text-[#3f3f50]">{item.content}</p>
           </motion.div>
         ))}
       </div>

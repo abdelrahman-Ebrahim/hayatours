@@ -12,7 +12,11 @@ module.exports = {
         'aboutBg' : "url('/aboutBg.jpg')",
         'gridBg' : "url('/gridMdBackground.svg')",
         'galleryBg1': "url('/gallery1.jpg')"
-      }
+      },
+      fontFamily: {
+        poppins : ["Poppins", "sans-serif"],
+        notoSansArabic: ["NotoSansArabic", "sans-serif"]
+      },
     },
   },
   plugins: [],

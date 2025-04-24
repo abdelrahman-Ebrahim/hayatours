@@ -36,7 +36,7 @@ export default async function LocaleLayout({
  
   return (
     <html lang={locale} dir={direction}>
-      <body className={`overflow-x-hidden bg-[#d2c8ac]`}>
+      <body className={`overflow-x-hidden bg-[#d2c8ac] ${locale === "ar" ? "font-notoSansArabic" : "font-poppins"}`}>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
